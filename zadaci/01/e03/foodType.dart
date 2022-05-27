@@ -29,5 +29,7 @@ class FoodType {
   }
 
   @override
-  String toString();
+  String toString() {
+    return ('$name has  p- $protein %, c- $carbs %, f - $fat % ');
+  }
 }
