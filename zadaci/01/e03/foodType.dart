@@ -1,15 +1,16 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class FoodType {
   String? name;
   int? protein;
   int? carbs;
   int? fat;
 
-  FoodType(
+  FoodType({
     this.name,
     this.protein,
     this.carbs,
     this.fat,
-  );
+  });
 
   set foodName(String name) {
     foodName = name;
@@ -34,6 +35,6 @@ class FoodType {
       'FoodType.protein',
       'FoodType.carbs',
       'FoodType.fat'
-    ][_value];
+    ][4];
   }
 }
