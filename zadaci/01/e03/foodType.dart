@@ -5,12 +5,12 @@ class FoodType {
   int? carbs;
   int? fat;
 
-  FoodType({
+  FoodType(
     this.name,
     this.protein,
     this.carbs,
     this.fat,
-  });
+  );
 
   String get foodName {
     return foodName;
