@@ -5,7 +5,6 @@ import 'foodType.dart';
 // }
 
 void main() {
-  final banana = FoodType.toString('banana', 4, 93, 4);
-
-  print(banana);
+  final banana = FoodType(name: 'banana', protein: 4, carbs: 92, fat: 3);
+  print(banana.toString());
 }

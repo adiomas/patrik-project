@@ -12,29 +12,22 @@ class FoodType {
     this.fat,
   });
 
-  set foodName(String name) {
-    foodName = name;
+  String get foodName {
+    return foodName;
   }
 
-  set foodProtein(int protein) {
-    foodProtein = protein;
+  int get foodProtein {
+    return foodProtein;
   }
 
-  set foodCarbs(int carbs) {
-    foodCarbs = carbs;
+  int get foodCarbs {
+    return foodCarbs;
   }
 
-  set foodFat(int fat) {
-    foodFat = fat;
+  int get foodFat {
+    return foodFat;
   }
 
   @override
-  String toString() {
-    return const [
-      'FoodType.name',
-      'FoodType.protein',
-      'FoodType.carbs',
-      'FoodType.fat'
-    ][4];
-  }
+  String toString();
 }
