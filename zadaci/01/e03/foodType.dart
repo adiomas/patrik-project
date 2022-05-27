@@ -28,7 +28,12 @@ class FoodType {
   }
 
   @override
-  FoodType.toString(String name, int protein, int carbs, int fat) {
-    print('$name has  p- $protein %, c- $carbs %, f - $fat % ');
+  String toString() {
+    return const [
+      'FoodType.name',
+      'FoodType.protein',
+      'FoodType.carbs',
+      'FoodType.fat'
+    ][_value];
   }
 }
