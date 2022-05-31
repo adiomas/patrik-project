@@ -11,18 +11,18 @@ class Food {
   });
 
   double get protein {
-    return type.foodProtein * weight / 100.0;
+    return type.getProtein * weight / 100.0;
   }
 
   double get carbs {
-    return type.foodCarbs * weight / 100;
+    return type.getCarbs * weight / 100;
   }
 
   double get fat {
-    return type.foodFat * weight / 100;
+    return type.getFat * weight / 100;
   }
 
-  String toStringInGrams() {
-    return ('$type.name, p - ${type.foodProtein}, c - ${type.foodCarbs}, f - ${type.foodFat} , ${weight} g ');
+  String toString() {
+    return ('${type}, ${weight} g ');
   }
 }
