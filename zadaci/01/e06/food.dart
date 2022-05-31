@@ -12,20 +12,20 @@ class Food {
     required this.weight,
   });
 
-  double get protein {
+  double get getProtein {
     return type.getProtein * weight / 100.0;
   }
 
-  double get carbs {
+  double get getCarbs {
     return type.getCarbs * weight / 100;
   }
 
-  double get fat {
+  double get getFat {
     return type.getFat * weight / 100;
   }
 
   @override
   String toString() {
-    return ('${type.name} has $protein g, c- $carbs g, f - $fat g ');
+    return ('${type.name} has ${getProtein} g, c- ${getCarbs} g, f - ${getFat} g ');
   }
 }
