@@ -1,13 +1,10 @@
+import 'foodType.dart';
 // void main() {
-//   print('Kreirano ${FoodType.getNumberOfCreatedInstances()} instanci');
 //   FoodType banana = FoodType(name: 'banana', protein: 4, carbs: 93, fat: 3);
-//   print('Kreirano ${FoodType.getNumberOfCreatedInstances()} instanci');
+//   print(banana.toString());
 // }
 
-import 'foodType.dart';
-
 void main() {
-  final banana = FoodType.toString('banana', 4, 93, 4);
-
-  print(banana);
+  final banana = FoodType('banana', 4, 92, 3);
+  print(banana.toString());
 }

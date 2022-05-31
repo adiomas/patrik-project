@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class FoodType {
   String? name;
   int? protein;
@@ -9,26 +10,28 @@ class FoodType {
     this.protein,
     this.carbs,
     this.fat,
-  );
+  ) {}
 
-  set foodName(String name) {
-    foodName = name;
+  String get foodName {
+    return foodName;
   }
 
-  set foodProtein(int protein) {
-    foodProtein = protein;
+  int get foodProtein {
+    return foodProtein;
   }
 
-  set foodCarbs(int carbs) {
-    foodCarbs = carbs;
+  int get foodCarbs {
+    return foodCarbs;
   }
 
-  set foodFat(int fat) {
-    foodFat = fat;
+  int get foodFat {
+    return foodFat;
   }
+
+  static int noOfObjects = 0;
 
   @override
-  FoodType.toString(String name, int protein, int carbs, int fat) {
-    print('$name has  p- $protein %, c- $carbs %, f - $fat % ');
+  String toString() {
+    return ('$name has  p- $protein %, c- $carbs %, f - $fat % ');
   }
 }
