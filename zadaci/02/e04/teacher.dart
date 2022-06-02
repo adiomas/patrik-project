@@ -4,9 +4,9 @@ import 'main.dart';
 class Teacher extends Person {
   Teacher({name, surname, age, email, subject, salary}) : super('', '', 0);
 
-  String email;
-  String subject;
-  int salary;
+  late String email;
+  late String subject;
+  late int salary;
 
   String get getEmail => this.email;
 
