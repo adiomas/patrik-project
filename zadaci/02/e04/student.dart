@@ -1,8 +1,13 @@
 import '../e03/person.dart';
 
 class Student extends Person {
-  Student(
-      super.name, super.surname, super.age, this.studentID, this.academicYear);
+  Student({
+    required super.name,
+    required super.surname,
+    required super.age,
+    required this.studentID,
+    required this.academicYear,
+  });
 
   int studentID;
   int academicYear;

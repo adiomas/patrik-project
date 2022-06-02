@@ -3,7 +3,7 @@ class Person {
   String surname;
   int age;
 
-  Person(this.name, this.surname, this.age);
+  Person({required this.name, required this.surname, required this.age});
 
   String get getName => this.name;
 
@@ -21,10 +21,10 @@ class Person {
     return ('${getName} ${getSurname} is  ${getAge} old');
   }
 
-  String? equals(Person) {
+  bool equals(Person) {
     if (Person == Person) {
-      return ('Same person');
-    } else
-      return ('Not same person');
+      return true;
+    }
+    return false;
   }
 }
