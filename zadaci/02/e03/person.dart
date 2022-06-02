@@ -20,11 +20,4 @@ class Person {
   String toString() {
     return ('${getName} ${getSurname} is  ${getAge} old');
   }
-
-  bool equals(Person) {
-    if (Person == Person) {
-      return true;
-    }
-    return false;
-  }
 }

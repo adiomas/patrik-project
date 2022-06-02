@@ -24,11 +24,11 @@ class Student extends Person {
   }
 
   @override
-  String equals(getStudentID) {
-    if (getStudentID == getStudentID) {
-      return 'same student';
-    } else {
-      return 'not same student';
+  bool operator ==(Object other) {
+    if (!(other is Student)) return false;
+    if (this.getStudentID == other.getStudentID) {
+      return true;
     }
+    return false;
   }
 }
