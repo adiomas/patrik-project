@@ -21,4 +21,14 @@ class Dessert {
   String toString() {
     return ('${getName} is ${getWeight} heavy and has ${getCalories}! ');
   }
+
+  String getDessertType() {
+    return "dessert";
+  }
+}
+
+void main() {
+  final cake = Dessert('cake', 432, 1500);
+
+  print(cake);
 }
