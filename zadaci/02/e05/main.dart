@@ -51,10 +51,26 @@ main() {
   persons.add(p4);
   persons.add(p5);
 
-  persons.forEach((Person) => print(Person.name + " " + Person.surname));
+  persons.forEach((person) => print(person.name + " " + person.surname));
 
-  test();
+  double salarySum = 0;
+  double avg;
+  int numberOfTeachers = 0;
+
+  for (int i = 0; i < persons.length; i++) {
+    final person = persons[i];
+
+    if (person is Teacher) {
+      salarySum += person.salary;
+      numberOfTeachers++;
+    }
+  }
+  avg = salarySum / numberOfTeachers;
+  String avgInString = avg.toStringAsFixed(2);
+  print('Average salary of teachers is: $avgInString');
 }
+
+// test();
 
 void test() {
   //kad završiš pisanje klasa odkomentiraj ovo
