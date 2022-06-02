@@ -30,7 +30,7 @@ class Teacher extends Person {
   }
 
   static increaseTeacherSalaies(List Teachers, int percentage) {
-    int salary = [Teachers * percentage] as int;
+    int salary = Teachers[5] * percentage;
     print(salary);
   }
 }
