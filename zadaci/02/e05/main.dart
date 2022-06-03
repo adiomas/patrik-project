@@ -66,8 +66,8 @@ main() {
     }
   }
   avg = salarySum / numberOfTeachers;
-  String avgInString = avg.toStringAsFixed(2);
-  print('Average salary of teachers is: $avgInString');
+
+  print('Average salary of teachers is: $avg.toStringAsFixed(2)');
 }
 
 // test();
