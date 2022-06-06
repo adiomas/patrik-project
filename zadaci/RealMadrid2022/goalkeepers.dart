@@ -1,5 +1,3 @@
-import 'main.dart';
-
 import 'player.dart';
 
 class Goalkeeper extends Player {

@@ -1,5 +1,6 @@
 import 'goalkeepers.dart';
 import 'player.dart';
+import 'attackers.dart';
 
 List<Player> players = [];
 
@@ -21,4 +22,14 @@ final p2 = Goalkeeper(
   position: 'GK',
   goalsRecived: 4,
   saves: 12,
+);
+
+final p3 = Attacker(
+  name: 'Karim',
+  surname: 'Benzema',
+  age: 32,
+  playerID: 9568343,
+  position: 'ST',
+  gamesPlayed: 46,
+  goalsScored: 66,
 );
