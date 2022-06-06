@@ -43,15 +43,8 @@ class Goalkeeper extends Player {
     setGoalsRecived = (saves.toDouble() / numberOfAttempts * 100) as int;
   }
 
-  // static void increaseSavingEfficiency(
-  //     int saves, List<Goalkeeper> goalkeepers) {
-  //   for (var saves in goalkeepers) {
-  //     goalkeeper.increaseSAvingEfficiency(percnetage);
-  //   }
-  // }
-
-  // @override
-  // String toString() {
-  //   return '${super.toString()} and improved efficiency of saving for ${percentage}';
-  // }
+  @override
+  String toString() {
+    return '${super.toString()} and improved efficiency of saving for $goalsRecived';
+  }
 }
