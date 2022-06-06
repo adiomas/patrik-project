@@ -4,13 +4,11 @@ import '../e04/student.dart';
 import '../e04/teacher.dart';
 
 class CompetitionEntry {
-
   late Teacher teacher;
   late Dessert desert;
   late Student students;
-  var int[] ratings;
-  
-  
+  int ratings;
+
   CompetitionEntry({
     required this.teacher,
     required this.desert,
@@ -18,6 +16,11 @@ class CompetitionEntry {
     required this.ratings,
   });
 
+  get getTeacher => this.teacher;
 
+  get getDessert => this.desert;
 
+  get getStudent => this.students;
+
+  int get getRatings => this.ratings;
 }
