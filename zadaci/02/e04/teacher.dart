@@ -9,6 +9,7 @@ class Teacher extends Person {
     required this.subject,
     required this.salary,
   });
+
   String email;
   String subject;
   double salary;

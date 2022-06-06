@@ -1,4 +1,5 @@
 import 'player.dart';
+import 'players_list.dart';
 
 class Attacker extends Player {
   Attacker({
@@ -25,11 +26,12 @@ class Attacker extends Player {
 
   double? averageGoalScored;
 
-  static double? goalPerGame(double averageGoalScored, List<Player> attackers,
+  void goalPerGame(double averageGoalScored, List<Player> attackers,
       int gamesPlayed, int goalsScored) {
     for (var attacker in attackers) {
       averageGoalScored = gamesPlayed / goalsScored.toDouble();
     }
-    return averageGoalScored;
+    // return averageGoalScored;
+    print(averageGoalScored);
   }
 }

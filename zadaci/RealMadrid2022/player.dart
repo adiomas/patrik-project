@@ -32,4 +32,6 @@ class Player {
   String toString() {
     return ('${getName} ${getSurname} is ${getAge} years old and plays on ${getPosition}');
   }
+
+  void averageGoalPerGame() {}
 }
