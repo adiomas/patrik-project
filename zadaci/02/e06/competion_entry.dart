@@ -7,20 +7,18 @@ class CompetitionEntry {
   late Teacher teacher;
   late Dessert desert;
   late Student students;
-  int ratings;
+  int? ratings;
 
   CompetitionEntry({
     required this.teacher,
     required this.desert,
-    required this.students,
-    required this.ratings,
   });
 
   get getTeacher => this.teacher;
 
   get getDessert => this.desert;
 
-  get getStudent => this.students;
+  final student1 = Student(name: 'Noa', surname: 'Tubic', age: 23, studentID: 453543234, academicYear: 2022,)
 
-  int get getRatings => this.ratings;
+
 }
