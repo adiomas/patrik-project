@@ -4,21 +4,45 @@ import '../e04/student.dart';
 import '../e04/teacher.dart';
 
 class CompetitionEntry {
-  late Teacher teacher;
-  late Dessert desert;
-  late Student students;
-  int? ratings;
+  final Teacher teacher;
+  final Dessert desert;
+  final List<Student> students = [];
+  final List<int> ratings = [];
 
   CompetitionEntry({
     required this.teacher,
     required this.desert,
   });
 
-  get getTeacher => this.teacher;
+  Teacher get getTeacher => this.teacher;
 
-  get getDessert => this.desert;
+  Dessert get getDessert => this.desert;
 
-  final student1 = Student(name: 'Noa', surname: 'Tubic', age: 23, studentID: 453543234, academicYear: 2022,)
+  List<Student> get getStudents => this.students;
 
+  List<int> get getRatings => this.ratings;
 
+  bool addRating(Student student, int rating) {
+    if (students.contains(student)) {
+      return false;
+    }
+    if (students.length >= 3) {
+      return false;
+    }
+
+    //dodaj u listu studenata studenta i u listu ratinga rating
+    students.add(student);
+    ratings.add(rating);
+
+    return true;
+  }
+
+  double getRating() {
+    int sum = 0;
+
+    for (int rating in ratings) {
+      sum += rating;
+    }
+    return sum / ratings.length;
+  }
 }
