@@ -45,4 +45,16 @@ class CompetitionEntry {
     }
     return sum / ratings.length;
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (!(other is CompetitionEntry)) return false;
+    if (this.teacher == other.teacher &&
+        this.desert == other.desert &&
+        this.students == other.students &&
+        this.ratings == other.ratings) {
+      return true;
+    }
+    return false;
+  }
 }
