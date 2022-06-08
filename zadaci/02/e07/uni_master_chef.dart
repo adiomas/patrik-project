@@ -1,41 +1,59 @@
-import 'dart:math';
-
+import '../e02/dessert.dart';
+import '../e03/person.dart';
 import '../e06/competion_entry.dart';
 
 class UniMasterChef {
-  final List<CompetitionEntry> competitionEntries = [];
-  final int maxApplications;
+  List<CompetitionEntry?> competitionEntries = [];
+  final int numberOfEntries;
+  int check = 0;
 
-  UniMasterChef(this.maxApplications);
+  UniMasterChef({required this.numberOfEntries}) {
+    competitionEntries =
+        List<CompetitionEntry?>.generate(numberOfEntries, (index) => null);
+  }
 
   bool addEntry(CompetitionEntry competitionEntry) {
+    if (check == competitionEntries.length) return false;
+
     if (competitionEntries.contains(competitionEntries)) {
       return false;
     }
-    if (competitionEntries.length >= maxApplications) {
-      return false;
-    }
+
     competitionEntries.add(competitionEntry);
+    check++;
+
     return true;
   }
 
-  CompetitionEntry getBestDessert() {
-    if (competitionEntries.isEmpty) {}
+  Dessert? getBestDessert() {
+    double currentBest = 0.0;
+    int maxId = 0;
+    if (check == 0) return null;
 
-    CompetitionEntry currentBest = competitionEntries[0];
+    if (competitionEntries.first != null) {
+      currentBest = competitionEntries.first!.getRating();
+    }
 
-    for (int i = 1; i <= competitionEntries.length; i++) {
-      if (competitionEntries[i].getRating() > currentBest.getRating()) {
-        currentBest = competitionEntries[i];
+    for (int i = 1; i <= check; i++) {
+      if (competitionEntries[i] != null) {
+        if (competitionEntries[i]!.getRating() > currentBest) {
+          currentBest = competitionEntries[i]!.getRating();
+          maxId = i;
+        }
       }
     }
-
-    return currentBest;
+    return competitionEntries.elementAt(maxId)!.getDessert;
   }
 
-  getInvolvedPeople(CompetitionEntry competitionEntry) {
-    for (int i = 0; i <= competitionEntries.length; i++) {
-      print(competitionEntry.students);
+  static List<Person> getInvolvedPeople(CompetitionEntry competitionEntry) {
+    List<Person> lista = [];
+
+    lista.add(competitionEntry.getTeacher);
+
+    for (var s in competitionEntry.getStudents) {
+      if (s != null) lista.add(s);
     }
+
+    return lista;
   }
 }

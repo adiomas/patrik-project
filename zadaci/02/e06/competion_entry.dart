@@ -6,44 +6,55 @@ import '../e04/teacher.dart';
 class CompetitionEntry {
   final Teacher teacher;
   final Dessert desert;
-  final List<Student> students = [];
-  final List<int> ratings = [];
+  List<Student?> students = [];
+  List<int?> ratings = [];
+  int check = 0;
 
   CompetitionEntry({
     required this.teacher,
     required this.desert,
-  });
-
+  }) {
+    students = List<Student?>.generate(3, (index) => null);
+// [null,null,null]
+    ratings = List<int?>.generate(3, (index) => null);
+  }
+//ogranicene liste trebaju biti za student i rating
   Teacher get getTeacher => this.teacher;
 
   Dessert get getDessert => this.desert;
 
-  List<Student> get getStudents => this.students;
+  List<Student?> get getStudents => this.students;
 
-  List<int> get getRatings => this.ratings;
+  List<int?> get getRatings => this.ratings;
+
+  get getName => null;
 
   bool addRating(Student student, int rating) {
     if (students.contains(student)) {
       return false;
     }
-    if (students.length >= 3) {
+    if (check == 3) {
       return false;
     }
 
     //dodaj u listu studenata studenta i u listu ratinga rating
     students.add(student);
     ratings.add(rating);
+    check++;
 
     return true;
   }
 
   double getRating() {
+    if (check == 0) return 0;
     int sum = 0;
 
-    for (int rating in ratings) {
-      sum += rating;
+    for (var rating in ratings) {
+      if (rating != null) {
+        sum += rating;
+      }
     }
-    return sum / ratings.length;
+    return double.parse((sum / check).toStringAsFixed(2));
   }
 
   @override

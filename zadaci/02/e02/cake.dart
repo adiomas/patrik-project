@@ -1,19 +1,19 @@
 import 'dessert.dart';
 
 class Cake extends Dessert {
-  Cake(super.name, super.weight, super.calories, this.containsGlouten,
-      this.cakeType);
-  bool containsGlouten;
-  String cakeType;
+  Cake(
+      {required String name,
+      required double weight,
+      required int calories,
+      required this.containsGlouten,
+      required this.cakeType})
+      : super(name: name, weight: weight, calories: calories);
+  final bool containsGlouten;
+  final String cakeType;
 
   bool get getContainsGlouten => this.containsGlouten;
 
-  set setContainsGlouten(bool containsGlouten) =>
-      this.containsGlouten = containsGlouten;
-
   String get getCakeType => this.cakeType;
-
-  set setCakeType(cakeType) => this.cakeType = cakeType;
 
   @override
   String toString() {
