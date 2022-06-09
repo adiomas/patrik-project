@@ -34,4 +34,21 @@ class Vehicle {
   double getPricePerMonth(double getPricePerDay) {
     return getPricePerDay * 30;
   }
+
+  newestVehicle(Vehicle, vehicles) {
+    if (vehicles.lenght == 0) {
+      return null;
+    }
+
+    int i = 0;
+
+    var newestVehicle = vehicles[0];
+
+    for (Vehicle in vehicles) {
+      i++;
+      if (Vehicle.getYear > newestVehicle) {
+        newestVehicle == vehicles[i];
+      }
+    }
+  }
 }

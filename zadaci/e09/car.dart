@@ -14,6 +14,4 @@ class Car extends Vehicle {
   String? get getCarType => this.carType;
 
   setSetCarType(String carType) => this.carType;
-
-
 }

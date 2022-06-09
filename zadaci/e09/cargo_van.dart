@@ -7,17 +7,17 @@ class CargoVan extends Van {
     required super.year,
     required super.price,
     required super.height,
-    this.maxLoad,
+    required this.maxLoad,
   });
 
-  int? maxLoad;
+  int maxLoad;
 
   get getMaxLoad => this.maxLoad;
 
   set setMaxLoad(maxLoad) => this.maxLoad = maxLoad;
 
   @override
-  double? getPricePerDay(int price) {
-    return super.getPricePerDay(price)! * 1.1;
+  double getPricePerDay(int price) {
+    return super.getPricePerDay(price) * 1.1;
   }
 }

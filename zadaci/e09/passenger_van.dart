@@ -1,20 +1,23 @@
 import 'van.dart';
 
-class PassangerVan extends Van {
-  PassangerVan({
+class PassengerVan extends Van {
+  PassengerVan({
     required super.regNo,
     required super.model,
     required super.year,
     required super.price,
     required super.height,
-    this.noOfSeats,
+    required this.noOfSeats,
   });
-
-  
 
   int? noOfSeats;
 
   int? get getNoOfSeats => this.noOfSeats;
 
   set setNoOfSeats(int? noOfSeats) => this.noOfSeats = noOfSeats;
+
+  @override
+  double getPricePerDay(int price) {
+    return super.getPricePerDay(price) * 0.8;
+  }
 }
