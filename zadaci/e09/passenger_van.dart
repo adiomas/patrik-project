@@ -17,7 +17,7 @@ class PassengerVan extends Van {
   set setNoOfSeats(int? noOfSeats) => this.noOfSeats = noOfSeats;
 
   @override
-  double getPricePerDay(int price) {
-    return super.getPricePerDay(price) * 0.8;
+  double getPricePerDay() {
+    return super.getPricePerDay() * 0.8;
   }
 }

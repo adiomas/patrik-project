@@ -12,6 +12,8 @@ Vehicle v = new Car(
   model: 'Renault Clio',
   year: 2018,
   price: 45,
+  carType: 'Caravan',
+  cargoSpace: 500,
 );
 
 Car car = new Car(
@@ -19,6 +21,8 @@ Car car = new Car(
   model: 'Renaul Megane',
   year: 2005,
   price: 30,
+  carType: 'Hatchback',
+  cargoSpace: 350,
 );
 
 Van van1 = new CargoVan(

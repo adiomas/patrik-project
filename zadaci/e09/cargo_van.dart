@@ -17,7 +17,7 @@ class CargoVan extends Van {
   set setMaxLoad(maxLoad) => this.maxLoad = maxLoad;
 
   @override
-  double getPricePerDay(int price) {
-    return super.getPricePerDay(price) * 1.1;
+  double getPricePerDay() {
+    return super.getPricePerDay() * 1.1;
   }
 }

@@ -6,12 +6,19 @@ class Car extends Vehicle {
     required super.model,
     required super.year,
     required super.price,
-    this.carType,
+    required this.carType,
+    required this.cargoSpace,
   });
 
-  String? carType;
+  String carType;
 
-  String? get getCarType => this.carType;
+  double cargoSpace;
+
+  String get getCarType => this.carType;
 
   setSetCarType(String carType) => this.carType;
+
+  double get getCargoSpace => this.cargoSpace;
+
+  set setCargoSpace(double cargoSpace) => this.cargoSpace = cargoSpace;
 }

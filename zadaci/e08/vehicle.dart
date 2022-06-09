@@ -1,3 +1,5 @@
+import '../e09/vehicles_list.dart';
+
 class Vehicle {
   String regNo;
   String model;
@@ -20,35 +22,45 @@ class Vehicle {
   int get getYear => this.year;
   set setYear(int year) => this.year = year;
 
-  double get getPrice => this.getPrice;
+  double get getPrice => this.price;
   set setPrice(double price) => this.price = price;
 
   toString() {
-    return 'Model of a car is ${getModel} registrations is ${getRegNo} dating from $getYear and price per hours is $getPrice ';
+    return 'Model of a car is ${getModel} registrations is ${getRegNo} dating from $getYear and price per hours is $getPrice \n';
   }
 
-  double getPricePerDay(int price) {
+  double getPricePerDay() {
     return price * 24;
   }
 
-  double getPricePerMonth(double getPricePerDay) {
-    return getPricePerDay * 30;
+  double getPricePerMonth() {
+    return getPricePerDay() * 30;
   }
 
-  newestVehicle(Vehicle, vehicles) {
-    if (vehicles.lenght == 0) {
+  Vehicle? newestVehicle(List<Vehicle> vehicles) {
+    if (vehicles.length == 0) {
       return null;
     }
 
-    int i = 0;
-
-    var newestVehicle = vehicles[0];
-
-    for (Vehicle in vehicles) {
-      i++;
-      if (Vehicle.getYear > newestVehicle) {
-        newestVehicle == vehicles[i];
+    final newestVehicle = vehicles[0];
+//uvhijek stavim klasu a trebam i malo slovo stavit Klasa  + ime varijable
+    for (Vehicle vehicle in vehicles) {
+      if (vehicle.getYear > newestVehicle.getYear) {
+        newestVehicle == vehicle;
       }
     }
+    return newestVehicle;
   }
+
+  // Vehicle? printAllVehiclesWithCargoSPaceGreaterThan(
+  //     double cargoSpace, vehicle) {
+  //   if (vehicles == 0) {
+  //     return null;
+  //   }
+  //   for (Vehicle vehicle in vehicles) {
+  //     if (cargoSpace > 340) {
+  //       print(vehicle);
+  //     }
+  //   }
+  // }
 }

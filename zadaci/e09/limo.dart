@@ -22,8 +22,8 @@ class Limo extends Vehicle {
   set setSunRoof(bool sunRoof) => this.sunRoof = sunRoof;
 
   @override
-  double getPricePerDay(int price) {
-    return super.getPricePerDay(price) * 1.5;
+  double getPricePerDay() {
+    return super.getPricePerDay() * 1.5;
   }
 
   // @override
