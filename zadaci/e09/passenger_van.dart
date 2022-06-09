@@ -10,6 +10,8 @@ class PassangerVan extends Van {
     this.noOfSeats,
   });
 
+  
+
   int? noOfSeats;
 
   int? get getNoOfSeats => this.noOfSeats;

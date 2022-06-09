@@ -7,7 +7,6 @@ class Van extends Vehicle {
     required super.year,
     required super.price,
     this.height,
-    this.noOfSeats,
   });
 
   double? height;
@@ -16,7 +15,7 @@ class Van extends Vehicle {
   get getHeight => this.height;
 
   set setHeight(double height) => this.height = height;
-
+  
   get getNoOfSeats => this.noOfSeats;
 
   set setNoOfSeats(int noOfSeats) => this.noOfSeats = noOfSeats;

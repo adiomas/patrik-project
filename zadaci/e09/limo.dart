@@ -6,18 +6,28 @@ class Limo extends Vehicle {
     required super.model,
     required super.year,
     required super.price,
-    this.miniBar,
-    this.sunRoof,
+    required this.miniBar,
+    required this.sunRoof,
   });
 
-  bool? miniBar;
-  bool? sunRoof;
+  bool miniBar;
+  bool sunRoof;
 
-  bool? get getMiniBar => this.miniBar;
+  bool get getMiniBar => this.miniBar;
 
-  set setMiniBar(bool? miniBar) => this.miniBar = miniBar;
+  set setMiniBar(bool miniBar) => this.miniBar = miniBar;
 
-  get getSunRoof => this.sunRoof;
+  bool get getSunRoof => this.sunRoof;
 
-  set setSunRoof(bool? sunRoof) => this.sunRoof = sunRoof;
+  set setSunRoof(bool sunRoof) => this.sunRoof = sunRoof;
+
+  @override
+  double getPricePerDay(int price) {
+    return super.getPricePerDay(price) * 1.5;
+  }
+
+  // @override
+  // double? getPricePerMonth(double getPricePerDay) {
+  //   return getPricePerDay * 30;
+  // }
 }

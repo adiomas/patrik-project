@@ -26,4 +26,12 @@ class Vehicle {
   toString() {
     return 'Model of a car is ${getModel} registrations is ${getRegNo} dating from $getYear and price per hours is $getPrice ';
   }
+
+  double getPricePerDay(int price) {
+    return price * 24;
+  }
+
+  double getPricePerMonth(double getPricePerDay) {
+    return getPricePerDay * 30;
+  }
 }

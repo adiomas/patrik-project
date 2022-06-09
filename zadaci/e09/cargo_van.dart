@@ -1,7 +1,7 @@
 import 'van.dart';
 
-class PassangerVan extends Van {
-  PassangerVan({
+class CargoVan extends Van {
+  CargoVan({
     required super.regNo,
     required super.model,
     required super.year,
@@ -15,4 +15,9 @@ class PassangerVan extends Van {
   get getMaxLoad => this.maxLoad;
 
   set setMaxLoad(maxLoad) => this.maxLoad = maxLoad;
+
+  @override
+  double? getPricePerDay(int price) {
+    return super.getPricePerDay(price)! * 1.1;
+  }
 }
