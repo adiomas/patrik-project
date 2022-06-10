@@ -1,5 +1,6 @@
 import 'desktop.dart';
 import 'laptop.dart';
+import 'netbook.dart';
 
 void main() {
   final laptop = new Laptop(
@@ -11,14 +12,25 @@ void main() {
   );
 
   final desktop1 = new Desktop(
-      model: 'H-43',
-      manufacturer: 'Cooler Master',
+    model: 'H-43',
+    manufacturer: 'Cooler Master',
+    operatingSystem: 'Windows',
+    caseHeight: 132.2,
+  );
+
+  final n = new Netbook(
+      manufacturer: 'Ideapad S12',
+      batteryCapactiy: 50,
+      model: 'Lenovo',
       operatingSystem: 'Windows',
-      caseHeight: 132.2);
+      weight: 1.55);
 
   print(laptop);
   print(desktop1);
+  print(n);
 
   print(desktop1.calculatePortabilityScore());
   print(laptop.calculatePortabilityScore());
+  print(n.calculatePortabilityScore());
+  print(n.getComputerType());
 }
