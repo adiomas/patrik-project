@@ -1,6 +1,10 @@
 import '../e08/vehicle.dart';
 
 class Car extends Vehicle {
+  String carType;
+
+  double cargoSpace;
+
   Car({
     required super.regNo,
     required super.model,
@@ -9,10 +13,6 @@ class Car extends Vehicle {
     required this.carType,
     required this.cargoSpace,
   });
-
-  String carType;
-
-  double cargoSpace;
 
   String get getCarType => this.carType;
 

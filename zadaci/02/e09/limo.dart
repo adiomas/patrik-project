@@ -1,6 +1,9 @@
 import '../e08/vehicle.dart';
 
 class Limo extends Vehicle {
+  bool miniBar;
+  bool sunRoof;
+
   Limo({
     required super.regNo,
     required super.model,
@@ -10,14 +13,8 @@ class Limo extends Vehicle {
     required this.sunRoof,
   });
 
-  bool miniBar;
-  bool sunRoof;
-
-  bool get getMiniBar => this.miniBar;
-
+//maknuti geteri jer su predefinirani u dartu
   set setMiniBar(bool miniBar) => this.miniBar = miniBar;
-
-  bool get getSunRoof => this.sunRoof;
 
   set setSunRoof(bool sunRoof) => this.sunRoof = sunRoof;
 

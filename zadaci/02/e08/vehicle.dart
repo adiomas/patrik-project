@@ -13,20 +13,16 @@ class Vehicle {
     required this.price,
   });
 
-  String get getRegNo => this.regNo;
   set setRegNo(String regNo) => this.regNo = regNo;
 
-  String get getModel => this.model;
   set setModel(String model) => this.model = model;
 
-  int get getYear => this.year;
   set setYear(int year) => this.year = year;
 
-  double get getPrice => this.price;
   set setPrice(double price) => this.price = price;
 
   toString() {
-    return 'Model of a car is ${getModel} registrations is ${getRegNo} dating from $getYear and price per hours is $getPrice \n';
+    return 'Model of a car is ${model} registrations is ${regNo} dating from $year and price per hours is $price \n';
   }
 
   double getPricePerDay() {
@@ -42,11 +38,11 @@ class Vehicle {
       return null;
     }
 
-    final newestVehicle = vehicles[0];
+    Vehicle newestVehicle = vehicles[0];
 //uvhijek stavim klasu a trebam i malo slovo stavit Klasa  + ime varijable
     for (Vehicle vehicle in vehicles) {
-      if (vehicle.getYear > newestVehicle.getYear) {
-        newestVehicle == vehicle;
+      if (vehicle.year > newestVehicle.year) {
+        newestVehicle = vehicle;
       }
     }
     return newestVehicle;

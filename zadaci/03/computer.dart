@@ -1,4 +1,7 @@
-class Computer {
+import 'desktop.dart';
+import 'laptop.dart';
+
+abstract class Computer {
   String model;
   String manufacturer;
   String operatingSystem;
@@ -24,5 +27,14 @@ class Computer {
 
   String toString() {
     return '${getModel} from ${getManufacturer} is running ${getOperatingSystem}';
+  }
+
+  String? getComputerType() {
+    if (getComputerType == Desktop) {
+      return 'DesktopPC';
+    } else if (getComputerType == Laptop) {
+      return 'Laptop PC';
+    } else
+      return 'false';
   }
 }

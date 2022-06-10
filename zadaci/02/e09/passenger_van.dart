@@ -1,6 +1,8 @@
 import 'van.dart';
 
 class PassengerVan extends Van {
+  int? noOfSeats;
+
   PassengerVan({
     required super.regNo,
     required super.model,
@@ -9,10 +11,6 @@ class PassengerVan extends Van {
     required super.height,
     required this.noOfSeats,
   });
-
-  int? noOfSeats;
-
-  int? get getNoOfSeats => this.noOfSeats;
 
   set setNoOfSeats(int? noOfSeats) => this.noOfSeats = noOfSeats;
 

@@ -1,6 +1,8 @@
 import 'van.dart';
 
 class CargoVan extends Van {
+  int maxLoad;
+
   CargoVan({
     required super.regNo,
     required super.model,
@@ -9,8 +11,6 @@ class CargoVan extends Van {
     required super.height,
     required this.maxLoad,
   });
-
-  int maxLoad;
 
   get getMaxLoad => this.maxLoad;
 
