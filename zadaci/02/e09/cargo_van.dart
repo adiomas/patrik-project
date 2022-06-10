@@ -12,8 +12,6 @@ class CargoVan extends Van {
     required this.maxLoad,
   });
 
-  get getMaxLoad => this.maxLoad;
-
   set setMaxLoad(maxLoad) => this.maxLoad = maxLoad;
 
   @override

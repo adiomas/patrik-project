@@ -18,4 +18,9 @@ class Desktop extends Computer {
   String toString() {
     return super.toString() + 'and its height is ${getCaseHeight} tall';
   }
+
+  @override
+  int calculatePortabilityScore() {
+    return (5 + getCaseHeight / 30).toInt();
+  }
 }

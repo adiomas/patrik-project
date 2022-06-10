@@ -30,11 +30,13 @@ abstract class Computer {
   }
 
   String? getComputerType() {
-    if (getComputerType == Desktop) {
+    if (getComputerType is Desktop) {
       return 'DesktopPC';
-    } else if (getComputerType == Laptop) {
+    } else if (getComputerType is Laptop) {
       return 'Laptop PC';
     } else
       return 'false';
   }
+
+  int calculatePortabilityScore();
 }

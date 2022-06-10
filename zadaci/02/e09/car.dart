@@ -14,11 +14,7 @@ class Car extends Vehicle {
     required this.cargoSpace,
   });
 
-  String get getCarType => this.carType;
-
   setSetCarType(String carType) => this.carType;
-
-  double get getCargoSpace => this.cargoSpace;
 
   set setCargoSpace(double cargoSpace) => this.cargoSpace = cargoSpace;
 }
