@@ -8,6 +8,7 @@ class Laptop extends Computer {
     required super.model,
     required super.manufacturer,
     required super.operatingSystem,
+    required super.memorySize,
     required this.batteryCapactiy,
     required this.weight,
   });

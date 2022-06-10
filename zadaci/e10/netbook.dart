@@ -6,6 +6,7 @@ class Netbook extends Laptop {
     required super.manufacturer,
     required super.operatingSystem,
     required super.batteryCapactiy,
+    required super.memorySize,
     required super.weight,
   });
 

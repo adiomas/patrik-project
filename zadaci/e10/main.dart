@@ -9,6 +9,7 @@ void main() {
     operatingSystem: 'Linux',
     batteryCapactiy: 45,
     weight: 34.5,
+    memorySize: 2048,
   );
 
   final desktop1 = new Desktop(
@@ -16,14 +17,17 @@ void main() {
     manufacturer: 'Cooler Master',
     operatingSystem: 'Windows',
     caseHeight: 132.2,
+    memorySize: 8000,
   );
 
   final n = new Netbook(
-      manufacturer: 'Ideapad S12',
-      batteryCapactiy: 50,
-      model: 'Lenovo',
-      operatingSystem: 'Windows',
-      weight: 1.55);
+    manufacturer: 'Ideapad S12',
+    batteryCapactiy: 50,
+    model: 'Lenovo',
+    operatingSystem: 'Windows',
+    weight: 1.55,
+    memorySize: 512,
+  );
 
   print(laptop);
   print(desktop1);

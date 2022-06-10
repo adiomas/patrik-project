@@ -7,6 +7,7 @@ class Desktop extends Computer {
     required super.model,
     required super.manufacturer,
     required super.operatingSystem,
+    required super.memorySize,
     required this.caseHeight,
   });
 

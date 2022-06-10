@@ -1,15 +1,15 @@
 import 'desktop.dart';
+import 'device.dart';
 import 'laptop.dart';
 
-abstract class Computer {
-  String model;
-  String manufacturer;
+abstract class Computer extends Device {
   String operatingSystem;
 
   Computer({
-    required this.model,
-    required this.manufacturer,
     required this.operatingSystem,
+    required super.manufacturer,
+    required super.memorySize,
+    required super.model,
   });
 
   String get getModel => this.model;
