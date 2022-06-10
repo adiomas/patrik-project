@@ -1,3 +1,4 @@
+import '../e08/vehicle.dart';
 import 'vehicles_list.dart';
 
 void main() {
