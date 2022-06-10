@@ -1,14 +1,14 @@
 import 'computer.dart';
 
 class Desktop extends Computer {
+  double caseHeight;
+
   Desktop({
     required super.model,
     required super.manufacturer,
     required super.operatingSystem,
     required this.caseHeight,
   });
-
-  double caseHeight;
 
   get getCaseHeight => this.caseHeight;
 

@@ -1,16 +1,14 @@
 import 'computer.dart';
 
 class Laptop extends Computer {
+  int batteryCapactiy;
+
   Laptop({
     required super.model,
     required super.manufacturer,
     required super.operatingSystem,
     required this.batteryCapactiy,
   });
-
-  int batteryCapactiy;
-
-  get getBatteryCapactiy => this.batteryCapactiy;
 
   set setBatteryCapactiy(batteryCapactiy) =>
       this.batteryCapactiy = batteryCapactiy;
