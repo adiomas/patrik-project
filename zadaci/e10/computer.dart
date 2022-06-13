@@ -37,6 +37,4 @@ abstract class Computer extends Device {
     } else
       return 'false';
   }
-
-  int calculatePortabilityScore();
 }

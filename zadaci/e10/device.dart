@@ -18,5 +18,9 @@ abstract class Device {
   ///
   /// Ima, zbog toga što svaki uredaj ima proizvodaca i model prebacio sam
   /// ta 2 propertyja u Device iz klase Computer
-
+  ///
+  ///
+  /// Osiguravanje da svaki prenosivi uredaj ima metode getModel i getBatteryCapacity
+  ///Ovo bas ne znam napravit, prijedlog rjesenja u nastavku
+  int calculatePortabilityScore();
 }
